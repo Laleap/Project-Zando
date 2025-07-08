@@ -5,12 +5,14 @@
     /* background-color: aquamarine; */
 }
 .product-img{
+    margin-top: 5%;
     width:50%;
     overflow:hidden;
     float:left;
     height:1000px;
     /* background-color: blueviolet; */
 }.product-detail{
+    margin-top: 5%;
     width:50%;
     overflow:hidden;
     height:1000px;
@@ -45,8 +47,50 @@
 }.product-img .big-image img{
     width:100%;
     height:100%;
-    object-fit: cover;   
+    object-fit: cover;  
 }
+/* button change image */
+.product-img .big-image .nav-button {
+    position: absolute;
+    top: 55%;
+    margin-left:18.5%;
+    margin-right:50%;
+    transform: translateY(-50%);
+    background-color: rgba(100, 98, 98, 0.5); /* Semi-transparent background */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    user-select: none; /* Prevent text selection on double-click */
+    transition: background-color 0.5s ease;
+    z-index: 10; /* Ensure buttons are above the image */
+}
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 2);
+}
+
+.prev-button {
+    left: 10px;
+    border-radius: 0 5px 5px 0; /* Rounded right edge */
+}
+
+.next-button {
+    right: 10px;
+    border-radius: 5px 0 0 5px; /* Rounded left edge */
+}
+
+.small-image .img-item img {
+    cursor: pointer; /* Indicate it's clickable */
+    border: 1.5px solid transparent; /* Default border */
+    transition: border-color 0.2s ease; /* Smooth transition for border */
+}
+
+.small-image .img-item img.active {
+    border-color: #a0a3a5; /* Example active border color */
+}
+
+/* Product-Detail */
 .product-detail .title{
     width:100%;
     height:10%;
